@@ -1,0 +1,24 @@
+name: Test issue template
+description: Test description
+title: "Some test"
+labels: ["migration", "github-enterprise-server"]
+body:
+  - type: textarea
+    id: logs
+    attributes:
+      label: Repositories
+      description: Please enter the repositories
+      render: csv
+      placeholder: |
+        https://github.example.com/your-org/your-repository-1
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Target repository visibility
+      description: Please select the visibility
+      options:
+        - Private
+        - Internal
+    validations:
+      required: true
